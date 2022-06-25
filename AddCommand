@@ -1,0 +1,31 @@
+#pragma once
+#include "IBaseCommand.h"
+#include"CalculatorProcessor.h"
+
+class AddCommand : public IBaseCommand {
+private:
+	CalculatorProcessor* _process = nullptr;
+	int procede = 0;
+public:
+	AddCommand(CalculatorProcessor* addProcess, int _procede) {
+		_process = addProcess;
+		procede = _procede;
+	}
+	
+	double AddCalculate(double first) {
+		
+		double first, second, result;
+		char oper, choice[10];
+		cout << "+ to add, - to subtract, * to multiply, / to divide, \n";
+	start:
+		cin >> first;
+	reused:
+		cin >> oper;
+		if (oper == '+') result = first + second;
+		cout << "=" << result << endl;
+	}
+	void Execute() {
+		double AddCalculate(double first);
+	}
+	
+};
