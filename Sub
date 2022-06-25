@@ -1,0 +1,29 @@
+# IBaseCommands#pragma once
+#include "IBaseCommand.h"
+#include"CalculatorProcessor.h"
+using namespace std;
+class SubtractCommand : public IBaseCommand {
+private:
+	CalculatorProcessor* _process = nullptr;
+	int sub = 0;
+public:
+	SubtractCommand(CalculatorProcessor* subProcess, int _pro) {
+		_process = subProcess;
+		sub = _pro;
+	}
+	double AddCalculate(double first) {
+
+		double first, second, result;
+		char oper, choice[10];
+		cout << "+ to add, - to subtract, * to multiply, / to divide, \n";
+	start:
+		cin >> first;
+	reused:
+		cin >> oper;
+		if (oper == '-') result = first - second;
+		cout << "=" << result << endl;
+	}
+	void Execute() {
+		double AddCalculate(double first);
+	}
+};
