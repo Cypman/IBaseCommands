@@ -1,0 +1,28 @@
+# IBaseCommands#pragma once
+#include "IBaseCommand.h"
+#include "CalculatorProcessor.h"
+class DivisionCommand: public IBaseCommand {
+private:
+	CalculatorProcessor* _proces = nullptr;
+	int _div = 0;
+public:
+	DivisionCommand(CalculatorProcessor* divProcess, int _process) {
+		_proces = divProcess;
+		_div = _process;
+	}
+	double AddCalculate(double first) {
+
+		double first, second, result;
+		char oper, choice[10];
+		cout << "+ to add, - to subtract, * to multiply, / to divide, \n";
+	start:
+		cin >> first;
+	reused:
+		cin >> oper;
+		if (oper == '/') result = first / second;
+		cout << "=" << result << endl;
+	}
+	void Execute() {
+		double AddCalculate(double first);
+	}
+};
